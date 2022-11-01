@@ -78,18 +78,19 @@ const Login = () => {
             placeholder="Password"
             label="Password"
           />
+          
           <Button
-            type="submit"
-            sx={{ marginTop: 3, borderRadius: 3 }}
-            variant="containd"
-            style={{ color: "blue" }}
+          type="submit"
+            sx={{ margin: 3, borderRadius: 3 }}
+            variant="contained"
+            size="large"
           >
             {isSignup ? "Signup" : "Login"}
           </Button>
-          <Button onClick={resetState} sx={{ marginTop: 3, borderRadius: 3 }}>
+          <Button onClick={resetState} sx={{ marginTop: 1, borderRadius: 3 }}>
             Change To {isSignup ? "Login" : "Signup"}
           </Button>
-          <Button sx={{ marginTop: 3, borderRadius: 3 }}>
+          <Button sx={{ marginTop: 1, borderRadius: 3 }}>
             Log in as a guest
           </Button>
         </Box>
