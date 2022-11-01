@@ -1,12 +1,14 @@
 import './App.css';
-import Maht from './Ditals_page';
+import Details from './Details_page';
+import Navbar from './Navbar';
 import Login from './Login_page';
 
 function App() {
   return (
     <div>
-      <Maht />
+      <Navbar />
       <Login />
+      <Details />
     </div>
   );
 }
