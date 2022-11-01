@@ -46,18 +46,14 @@ const Details = () => {
           sx={{
             ":hover": {
               boxShadow: "10px 10px 20px #ccc",
-              "& button": { m: 1 },
+              //   "& button": { m: 1 },
             },
           }}
         >
           <Typography variant="h2" padding={3} textAlign="center">
             Eazy Gift
           </Typography>
-          <Typography
-            variant="h4"
-            padding={3}
-            textAlign="center"
-          >
+          <Typography variant="h4" padding={3} textAlign="center">
             Johnny and Lily's wedding
           </Typography>
 
@@ -76,6 +72,7 @@ const Details = () => {
               id="outlined-basic"
               label="name"
               variant="outlined"
+              margin="normal"
             />
           </Box>
 
@@ -94,6 +91,8 @@ const Details = () => {
               id="outlined-basic"
               label="phone"
               variant="outlined"
+              margin="normal"
+
             />
           </Box>
 
@@ -114,10 +113,14 @@ const Details = () => {
               variant="outlined"
               multiline
               rows={4}
+              margin="normal"
+
             />
           </Box>
-          <Button size="small">List of written blessing</Button>
-          <Button variant="contained" size="large">
+          <Button sx={{ marginTop: 2, marginBottom: 2, borderRadius: 2 }} size="small">
+            List of written blessing
+          </Button>
+          <Button sx={{marginBottom: 2, borderRadius: 3}} variant="contained" size="large">
             payment
           </Button>
         </Box>
