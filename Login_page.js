@@ -11,12 +11,17 @@ const Login = () => {
   const handelchange = (e) => {
     setInput((prevState) => ({
       ...prevState,
-      [e.target.name] : e.target.value
-    }))
-  }
+      [e.target.name]: e.target.value,
+    }));
+  };
   const handelSubmit = (e) => {
     e.preventDefault();
-  }
+  };
+  const resetState = () => {
+    setIsSignup(!isSignup);
+    setInput({ name: "", email: "", password: "" });
+  };
+  console.log(input);
   return (
     <div>
       <form onSubmit={handelSubmit}>
@@ -42,46 +47,50 @@ const Login = () => {
           </Typography>
           {isSignup && (
             <TextField
-            onChange={handelchange}
+              onChange={handelchange}
               name="name"
               value={input.name}
               margin="normal"
               type={"text"}
               variant="outlined"
               placeholder="Name"
+              label="Name"
             />
           )}
           <TextField
-          onChange={handelchange}
+            onChange={handelchange}
             name="email"
             value={input.email}
             margin="normal"
             type={"email"}
             variant="outlined"
             placeholder="Email"
+            label="Email"
           />
 
           <TextField
-          onChange={handelchange}
+            onChange={handelchange}
             name="password"
             value={input.password}
             margin="normal"
             type={"password"}
             variant="outlined"
             placeholder="Password"
+            label="Password"
           />
-          <Button type="submit"
+          <Button
+            type="submit"
             sx={{ marginTop: 3, borderRadius: 3 }}
             variant="containd"
-            style={{color: "blue"}}
+            style={{ color: "blue" }}
           >
             {isSignup ? "Signup" : "Login"}
           </Button>
-          <Button
-            onClick={resetState}
-            sx={{ marginTop: 3, borderRadius: 3 }}
-          >
+          <Button onClick={resetState} sx={{ marginTop: 3, borderRadius: 3 }}>
             Change To {isSignup ? "Login" : "Signup"}
+          </Button>
+          <Button sx={{ marginTop: 3, borderRadius: 3 }}>
+            Log in as a guest
           </Button>
         </Box>
       </form>
