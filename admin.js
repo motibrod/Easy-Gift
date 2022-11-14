@@ -25,7 +25,7 @@ const rows = [
   createData("J.K. Rowling", 5, 1600, "hi", "no", "yes"),
 ];
 
-export default function BasicTable() {
+export default function Admin() {
   return (
     <div>
       <Typography variant="h2" padding={3} textAlign="center">
